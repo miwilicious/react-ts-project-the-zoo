@@ -3,6 +3,7 @@ import { Home } from "./pages/Home";
 import { Layout } from "./pages/Layout";
 import { NotFound } from "./pages/NotFound";
 import { AnimalDetails } from "./pages/AnimalDetails";
+import { Animals } from "./pages/Animals";
 
 export const router = createBrowserRouter([
   {
