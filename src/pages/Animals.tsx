@@ -1,3 +1,24 @@
+import { useState, useEffect } from "react";
+import { IAnimal } from "../models/IAnimal";
+import { getAnimals } from "../services/animalService";
+import { AnimalDetails } from "./AnimalDetails";
+
 export const Animals = () => {
-  return <h3>Wow, so many of them!</h3>;
+  const [animal, setAnimal] = useState<IAnimal>();
+
+  useEffect(() => {
+    const getData = async () => {
+      const data = await getAnimals();
+      setAnimal(data);
+    };
+    if (animal.length > 0) return;
+    getData();
+  });
+  return (
+    <>
+      <div className="container-fluid justify-content-center d-flex">
+        <AnimalDetails animal={animal}></AnimalDetails>
+      </div>
+    </>
+  );
 };
