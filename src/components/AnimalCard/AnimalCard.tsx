@@ -1,19 +1,30 @@
 import { Link } from "react-router";
 import { IAnimal } from "../../models/IAnimal";
+import { formatLastFed } from "../../utils/dateUtils";
 
-interface IAnimalCard {
+import "./AnimalCard.scss";
+import { FeedingStatus } from "../FeedingStatus.tsx/FeedingStatus.tsx";
+
+interface IAnimalCardProps {
   animal: IAnimal;
 }
 
-export const AnimalCard = (props: IAnimalCard) => {
+export const AnimalCard = (props: IAnimalCardProps) => {
   return (
-    <div>
-      <h5>{props.animal.name}</h5>
-      <h6>{props.animal.latinName}</h6>
-      <p>{props.animal.lastFed}</p>
-      <img src={props.animal.imageUrl} alt={props.animal.name} />
-      <div>
-        <Link to={"/animal/detail"}>Läs mer...</Link>
+    <div className="animal">
+      <h4>{props.animal.name}</h4>
+      <span className="font-italic">{props.animal.latinName}</span>
+      <p>Last fed: {formatLastFed(props.animal.lastFed)}</p>
+
+      <FeedingStatus lastFed={props.animal.lastFed} />
+
+      <img
+        className="rounded mx-auto img-thumbnail"
+        src={props.animal.imageUrl}
+        alt={props.animal.name}
+      />
+      <div className="py-2">
+        <Link to={`/animal-details/${props.animal.id}`}>Read more...</Link>
       </div>
     </div>
   );

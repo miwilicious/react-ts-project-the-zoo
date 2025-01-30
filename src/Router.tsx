@@ -11,18 +11,9 @@ export const router = createBrowserRouter([
     element: <Layout />,
     errorElement: <NotFound />,
     children: [
-      {
-        path: "/",
-        element: <Home />,
-      },
-      {
-        path: "/animals",
-        element: <Animals />,
-      },
-      {
-        path: "/animal-details/:id",
-        element: <AnimalDetails />,
-      },
+      { path: "/", element: <Home /> },
+      { path: "/animals", element: <Animals /> },
+      { path: "/animal-details/:id", element: <AnimalDetails /> },
     ],
   },
 ]);

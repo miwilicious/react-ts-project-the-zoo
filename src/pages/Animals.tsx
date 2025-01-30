@@ -1,24 +1,24 @@
 import { useState, useEffect } from "react";
 import { IAnimal } from "../models/IAnimal";
 import { getAnimals } from "../services/animalService";
-import { AnimalDetails } from "./AnimalDetails";
+import { AnimalCollection } from "../components/AnimalCollection/AnimalCollection";
 
 export const Animals = () => {
-  const [animal, setAnimal] = useState<IAnimal>();
+  const [animals, setAnimals] = useState<IAnimal[]>([]); // ✅ Array of animals
 
   useEffect(() => {
-    const getData = async () => {
+    const fetchData = async () => {
       const data = await getAnimals();
-      setAnimal(data);
+      setAnimals(data);
     };
-    if (animal.length > 0) return;
-    getData();
-  });
+
+    fetchData();
+  }, []);
+
   return (
-    <>
-      <div className="container-fluid justify-content-center d-flex">
-        <AnimalDetails animal={animal}></AnimalDetails>
-      </div>
-    </>
+    <div className="container-fluid text-center">
+      <h1 className="py-4">Our Animals</h1>
+      <AnimalCollection animals={animals} />
+    </div>
   );
 };

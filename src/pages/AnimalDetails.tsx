@@ -6,17 +6,22 @@ import { getAnimalById } from "../services/animalService";
 
 export const AnimalDetails = () => {
   const { id } = useParams();
-  const [animal, setAnimal] = useState<IAnimalExt>();
+  const [animal, setAnimal] = useState<IAnimalExt | null>(null);
 
   useEffect(() => {
-    const getData = async () => {
+    const fetchData = async () => {
       if (id) {
         const data = await getAnimalById(id);
         setAnimal(data);
       }
     };
-    if (animal) return;
-    getData();
-  });
-  return <>{animal && <ExtAnimalDetails animal={animal} />}</>;
+
+    fetchData();
+  }, [id]);
+
+  return (
+    <div className="container">
+      {animal ? <ExtAnimalDetails animal={animal} /> : <p>Loading...</p>}
+    </div>
+  );
 };
