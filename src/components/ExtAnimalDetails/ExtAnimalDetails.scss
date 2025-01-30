@@ -14,7 +14,6 @@
   overflow-x: hidden;
 }
 
-/* ✅ Background Image with Opacity */
 .details::before {
   content: "";
   position: fixed;
@@ -26,6 +25,6 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.1; /* ✅ Adjust this value (0 = fully transparent, 1 = fully visible) */
-  z-index: -1; /* ✅ Keeps it behind all content */
+  opacity: 0.1;
+  z-index: -1;
 }
