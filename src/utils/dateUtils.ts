@@ -13,7 +13,7 @@ export const formatLastFed = (dateString: string): string => {
     hour12: false,
   });
 
-  return `${formattedDate} kl. ${formattedTime}`;
+  return `${formattedDate} at ${formattedTime}`;
 };
 export const wasRecentlyFed = (lastFed: string): boolean => {
   const lastFedTime = new Date(lastFed).getTime();

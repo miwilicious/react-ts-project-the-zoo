@@ -1,8 +1,18 @@
-a {
-  text-decoration: none;
-  color: black;
-  font-size: 1rem;
+.animal-card {
+  a {
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
 }
-a:hover {
-  text-decoration: underline;
+
+.animal-card img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 10px;
 }

@@ -16,9 +16,10 @@ export const Animals = () => {
   }, []);
 
   return (
-    <div className="container-fluid text-center">
-      <h1 className="py-4">Our Animals</h1>
-      <AnimalCollection animals={animals} />
-    </div>
+    <>
+      <div className="container-lg">
+        <AnimalCollection animals={animals} />{" "}
+      </div>{" "}
+    </>
   );
 };

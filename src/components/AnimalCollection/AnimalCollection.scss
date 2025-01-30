@@ -1,0 +1,27 @@
+.animal-collection {
+  position: relative;
+  margin: 0;
+  height: 100dvh;
+  width: 100%; /* ✅ Ensures it doesn’t exceed the viewport width */
+
+  display: flex;
+  flex-wrap: wrap; /* ✅ Ensures cards don’t overflow */
+  justify-content: center;
+}
+
+/* ✅ Background Image with Two Hearts Per Row */
+.animal-collection::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("https://www.shutterstock.com/shutterstock/videos/12352697/thumb/4.jpg?ip=x480");
+  background-size: 50vw auto;
+  background-repeat: repeat;
+  background-position: center;
+  opacity: 0.1;
+  z-index: -1;
+  overflow-x: hidden; /* ✅ Ensures it doesn't cause scrolling */
+}

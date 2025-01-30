@@ -3,8 +3,10 @@ import "./Header.scss";
 
 export const Header = () => {
   return (
-    <header className="d-flex w-100 justify-content-end">
-      <nav className="d-flex align-items-center h-100">
+    <header className="w-100  d-flex justify-content-between align-items-center px-4">
+      <div className="shadow-into-light logo">The Zoo</div>
+
+      <nav className="d-flex">
         <NavLink to="/" className="text-decoration-none pe-4">
           Home
         </NavLink>

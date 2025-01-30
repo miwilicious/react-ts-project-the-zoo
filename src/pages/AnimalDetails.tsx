@@ -21,7 +21,11 @@ export const AnimalDetails = () => {
 
   return (
     <div className="container">
-      {animal ? <ExtAnimalDetails animal={animal} /> : <p>Loading...</p>}
+      {animal ? (
+        <ExtAnimalDetails animal={animal} />
+      ) : (
+        <h2 className="py-5 text-center">Loading...</h2>
+      )}
     </div>
   );
 };

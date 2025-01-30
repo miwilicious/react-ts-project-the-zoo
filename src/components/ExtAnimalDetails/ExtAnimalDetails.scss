@@ -1,0 +1,31 @@
+.details {
+  a {
+    font-size: 0.9rem;
+    top: 4rem;
+    position: absolute;
+  }
+}
+
+.details {
+  position: relative;
+  margin: 0;
+  height: 100dvh;
+
+  overflow-x: hidden;
+}
+
+/* ✅ Background Image with Opacity */
+.details::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("https://www.shutterstock.com/image-vector/heart-continuous-line-drawing-single-600nw-1810509250.jpg"); // ✅ Change this to your image path
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.1; /* ✅ Adjust this value (0 = fully transparent, 1 = fully visible) */
+  z-index: -1; /* ✅ Keeps it behind all content */
+}
