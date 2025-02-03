@@ -3,7 +3,7 @@ import "./Header.scss";
 
 export const Header = () => {
   return (
-    <header className="w-100  d-flex justify-content-between align-items-center px-4">
+    <header className="w-100  d-flex justify-content-between align-items-center  px-4">
       <div className="shadow-into-light logo">The Zoo</div>
 
       <nav className="d-flex">

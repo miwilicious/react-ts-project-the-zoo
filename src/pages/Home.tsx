@@ -1,8 +1,8 @@
 export const Home = () => {
   return (
-    <div className="container-fluid home-container d-flex  justify-content-center text-center ">
+    <div className="container home-container d-flex justify-content-center text-center">
       <div className="row">
-        <div className="col-12 mt-5 pt-5">
+        <div className="col-12 mt-5 pt-5 px-0">
           <iframe
             src="https://media.tenor.com/DZKcXvpu-d8AAAAi/bongo-cat-cute-png.gif"
             width="100%"

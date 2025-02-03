@@ -2,18 +2,26 @@
   a {
     font-size: 0.9rem;
     top: 4rem;
+    left: 2rem;
     position: absolute;
   }
 }
-
-.details {
-  position: relative;
-  margin: 0;
-  height: 100dvh;
-
-  overflow-x: hidden;
+@media (min-width: 576px) {
+  .details {
+    a {
+      top: 4rem;
+      left: 4rem;
+    }
+  }
 }
 
+@media (min-width: 768px) {
+  .details {
+    margin: 0;
+    height: 100dvh;
+    overflow-x: hidden;
+  }
+}
 .details::before {
   content: "";
   position: fixed;
@@ -21,7 +29,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-image: url("https://www.shutterstock.com/image-vector/heart-continuous-line-drawing-single-600nw-1810509250.jpg"); // ✅ Change this to your image path
+  background-image: url("https://www.shutterstock.com/image-vector/heart-continuous-line-drawing-single-600nw-1810509250.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

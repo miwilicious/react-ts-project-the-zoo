@@ -39,57 +39,57 @@ export const ExtAnimalDetails = (props: IExtAnimalDetailsProps) => {
     window.dispatchEvent(new Event("storage"));
   };
   return (
-    <div className="align-items-center details d-flex">
-      <div className=" row">
-        <div className="justify-content-center d-flex h-100 ">
-          <div className="col-md-6 col-12">
-            <Link to={"/animals"} className="d-block">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                className="bi bi-arrow-left"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"
-                />
-              </svg>{" "}
-              Back
-            </Link>
-            <img
-              src={props.animal.imageUrl}
-              alt={props.animal.name}
-              className="rounded w-100 my-2"
+    <div className=" container align-items-center details d-flex">
+      <div className="">
+        <Link to={"/animals"} className="d-block">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            className="bi bi-arrow-left"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fillRule="evenodd"
+              d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"
             />
+          </svg>
+          Back
+        </Link>
+      </div>
+      <div className=" row">
+        <div className="col-md-6 col-12 justify-content-center d-flex h-100 mb-4 mb-md-0 pt-4 pt-md-0">
+          <img
+            src={props.animal.imageUrl}
+            alt={props.animal.name}
+            className="rounded w-100 my-2"
+          />
+        </div>
+        <div className="col-md-5 offset-md-1 col-12 my-auto order-md-0 order-1 ">
+          <div className="d-flex justify-content-between align-items-center mb-3">
+            <h2>
+              {props.animal.name}, born {props.animal.yearOfBirth}.
+            </h2>
+            {!isFed && (
+              <button
+                onClick={handleFeedAnimal}
+                className="btn btn-outline-dark noto"
+              >
+                Feed {props.animal.name}
+              </button>
+            )}
           </div>
-          <div className="col-md-5 offset-md-1 col-12  my-auto">
-            <div className="d-flex justify-content-between align-items-center mb-3">
-              <h2>
-                {props.animal.name}, born {props.animal.yearOfBirth}.
-              </h2>
-              {!isFed && (
-                <button
-                  onClick={handleFeedAnimal}
-                  className="btn btn-outline-dark noto"
-                >
-                  Feed {props.animal.name}
-                </button>
-              )}
-            </div>
-            <p className="cactus small">{props.animal.latinName}</p>
-            <p>{props.animal.shortDescription}</p>
-            <p>{props.animal.longDescription}</p>
-          </div>
+          <p className="cactus small">{props.animal.latinName}</p>
+          <p>{props.animal.shortDescription}</p>
+          <p>{props.animal.longDescription}</p>
         </div>
 
-        <div className="row mt-4">
-          <div className="col-12 d-flex justify-content-between">
+        <div className="row mt-md-4 my-3 order-md-1 order-0">
+          <div className="col-12 d-md-flex justify-content-md-between">
             <p className="small">Last fed: {formatLastFed(lastFed)}</p>
 
-            <div>
+            <div className="">
               <span className="h5">
                 {props.animal.name} is{" "}
                 {isFed ? "fed and happy!" : "hungry and sad"}
