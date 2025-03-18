@@ -2,15 +2,22 @@
 Zoo React App (TypeScript)
 Built a single-page React app using TypeScript that fetches animal data from an external API and stores it locally (localStorage). 
 
-The app includes:
-Home Page: Displays a list of animals with names and brief descriptions.
-Animal Page: Displays a list of animals with names and brief descriptions. Also shows if the animal is happy or not, depending if it has been fed in the last 4 hours.
-Animal Detail Page: Clicking on an animal shows detailed information. 
+### The app includes:
+#### Home Page:
+Displays a list of animals with names and brief descriptions.
+#### Animal Page:
+Displays a list of animals with names and brief descriptions. Also shows if the animal is happy or not, depending if it has been fed in the last 4 hours.
+#### Animal Detail Page:
+Clicking on an animal shows detailed information. 
 Users can mark animals as fed, recording feeding times, and temporarily disabling the feed button.
-Feed Timer: Automatically resets the feed status after 3 hours, enabling the feeding button again.
-Notifications: Displays reminders on the homepage and animal pages when an animal requires feeding (after 4 hours).
-Error Handling: Gracefully handles broken image links.
-Structure: Organized codebase with modular components and services for API interactions and calculations.
+#### Feed Timer:
+Automatically resets the feed status after 3 hours, enabling the feeding button again.
+#### Notifications:
+Displays reminders on the homepage and animal pages when an animal requires feeding (after 4 hours).
+#### Error Handling:
+Gracefully handles broken image links.
+#### Structure: 
+Organized codebase with modular components and services for API interactions and calculations.
 
 ## Technique
  
