@@ -2,6 +2,9 @@
 Zoo React App (TypeScript)
 Built a single-page React app using TypeScript that fetches animal data from an external API and stores it locally (localStorage). 
 
+## deployed live site 
+https://reactproject-zoo.netlify.app/
+
 ### The app includes:
 #### Home Page:
 Displays a list of animals with names and brief descriptions.
